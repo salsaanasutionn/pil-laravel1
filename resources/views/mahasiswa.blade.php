@@ -46,23 +46,19 @@
         <th>NIM</th>
         <th>Nama Mahasiswa</th>
         <th>Jenis Kelamin</th>
+        <th>Alamat</th>
         <th colspan="2">TTL</th>
        </tr>
       </thead>
       <tbody>
-        <?php $nilai_awal = 0; ?>
-        @while ($nilai_awal < $jumlah)
-        
+        @for ($i = 0; $i < $jumlah; $i++)
         <tr>
-          <td>{{ $NIM [$nilai_awal]}}</td>
-          <td>{{ $nama [$nilai_awal]}}</td>
-          <td>Salsa Fadila Nasution</td>
-          <td>Perempuan</td>
-          <td>18-03-2004</td>
-          <td>Mandailing Natal</td>
-        </tr>
-        <<?php $nilai_awal++ ?>
-      @endwhile
+          <td>{{ $NIM[$i] }}</td>
+          <td>{{ $nama[$i] }}</td>
+          <td>perempuan</td>
+          <td>Medan</td>
+        </tr>    
+        @endfor
 
       </tbody>
     </table>
