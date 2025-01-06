@@ -12,16 +12,13 @@ Route::get('about', function () {
 });
 
 Route::get('mahasiswa', function () {
-    return view('mahasiswa');
+    $NIM = [123, 124, 125, 126];
+    $nama = ['Salsa', 'jannah', 'Amel', 'aldi'];
+    $jumlah = count($NIM);
+    return view('mahasiswa', compact('NIM', 'jumlah', 'nama'));
 });
 
 Route::get('profile', function () {
     $nama = 'Salsa';
     return view('profile', compact('nama'));
-});
-
-Route::get('array', function () {
-    for ($i = 1; $i <= 5; $i++) {
-        echo 'Hello Word' . $i . 'x<br>';
-    }
 });

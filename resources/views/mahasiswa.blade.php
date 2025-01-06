@@ -50,27 +50,19 @@
        </tr>
       </thead>
       <tbody>
-      <tr>
-        <td>0702221032</td>
-        <td>Salsa Fadila Nasution</td>
-        <td>Perempuan</td>
-        <td>18-03-2004</td>
-        <td>Mandailing Natal</td>
-      </tr>
-      <tr>
-        <td>0702221033</td>
-        <td>Nurjannah</td>
-        <td>Perempuan</td>
-        <td>18-31-2004</td>
-        <td>Medan</td>
-      </tr>
-      <tr>
-        <td>0702221034</td>
-        <td>Putri Amelia</td>
-        <td>Perempuan</td>
-        <td>07-06-2004</td>
-        <td>Padang Sidimpuan</td>
-      </tr>
+        <?php $nilai_awal = 0; ?>
+        @while ($nilai_awal < $jumlah)
+        
+        <tr>
+          <td>{{ $NIM [$nilai_awal]}}</td>
+          <td>{{ $nama [$nilai_awal]}}</td>
+          <td>Salsa Fadila Nasution</td>
+          <td>Perempuan</td>
+          <td>18-03-2004</td>
+          <td>Mandailing Natal</td>
+        </tr>
+        <<?php $nilai_awal++ ?>
+      @endwhile
 
       </tbody>
     </table>
